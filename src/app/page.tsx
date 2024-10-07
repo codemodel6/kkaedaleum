@@ -110,14 +110,23 @@ export default function Home() {
         >
           <h1>Fourth Screen</h1>
         </section>
-        <div className="fixed-sidebar">
-          {[...Array(sectionsCount)].map((_, index) => (
-            <div
-              key={index}
-              className={`circle ${index === activeIndex ? "active" : ""}`}
-              onClick={() => scrollToSection(index)}
-            ></div>
-          ))}
+        <div className="kkae-stick">
+          <div className="stick-face">
+            <div className="stick-eye-line">
+              <div className="stick-eyes"></div>
+              <div className="stick-eyes"></div>
+            </div>
+            <div className="stick-mouse"></div>
+          </div>
+          <div className="stick-circle-block">
+            {[...Array(sectionsCount)].map((_, index) => (
+              <div
+                key={index}
+                className={`circle ${index === activeIndex ? "active" : ""}`}
+                onClick={() => scrollToSection(index)}
+              ></div>
+            ))}
+          </div>
         </div>
       </div>
     </>
