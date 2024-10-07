@@ -1,0 +1,68 @@
+@import "/src/assets/global/globalDisplay.scss";
+@import "/src/assets/color/ColorNote.scss";
+
+.home-wrppaer {
+  height: 100vh;
+  background-color: black;
+  overflow: auto;
+
+  /* 스크롤 안보이게 하는 css */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer / Edge */
+
+  &::-webkit-scrollbar {
+    display: none; /* Safari / Chrome */
+  }
+}
+
+.section {
+  height: 100vh;
+  @include centerColumn;
+
+  &.blue {
+    background-color: $Bg100;
+  }
+
+  &.green {
+    background-color: #10b981;
+  }
+
+  &.red {
+    background-color: #ef4444;
+  }
+
+  &.yellow {
+    background-color: #f59e0b;
+  }
+
+  h1 {
+    color: white;
+    font-size: 2.25rem;
+  }
+}
+
+.fixed-sidebar {
+  @include aroundColumn;
+  position: fixed;
+  background-color: $Bg200;
+  border: 2px solid white;
+  border-radius: 10px;
+  right: 2%;
+  top: 50%;
+  width: 30px;
+  height: 150px;
+  z-index: 1;
+
+  .circle {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &.active {
+      background-color: $Primary100;
+    }
+  }
+}
