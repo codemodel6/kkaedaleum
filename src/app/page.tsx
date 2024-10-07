@@ -16,13 +16,22 @@ export default function Home() {
   - 함수 : 섹션 이동 함수
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
   const scrollToSection = useCallback((index: number) => {
-    console.log("인덱스 : ", index);
     const target = sectionsRef.current[index];
+
+    if (isScrolling.current) return; // 스크롤 중이면 함수 실행 중지
+
+    isScrolling.current = true; // 스크롤 잠금 시작
+
     if (target && homeWrapperRef.current) {
       homeWrapperRef.current.scrollTo({
         top: target.offsetTop,
         behavior: "smooth",
       });
+
+      // 0.8초 후 스크롤 잠금 해제
+      setTimeout(() => {
+        isScrolling.current = false;
+      }, 800);
 
       // 해당 섹션의 인덱스값으로 변경
       setActiveIndex(index); // 마우스 휠 용
@@ -45,13 +54,6 @@ export default function Home() {
       if (newIndex >= 0 && newIndex < sectionsRef.current.length) {
         currentSectionIndex.current = newIndex; // currentSectionIndex를 ref의 current로 업데이트
         scrollToSection(currentSectionIndex.current);
-
-        isScrolling.current = true; // 스크롤 잠금 시작
-
-        // 0.8초 후 스크롤 잠금 해제
-        setTimeout(() => {
-          isScrolling.current = false;
-        }, 800);
       }
     },
     [scrollToSection]
