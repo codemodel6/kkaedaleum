@@ -1,0 +1,37 @@
+/** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- 한 화면을 보여주는 블록
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+
+.global-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  height: 100vh;
+  padding-top: 90px;
+}
+
+.global-center-block {
+  @extend .global-block;
+  justify-content: center;
+}
+
+.global-full-block {
+  @extend .global-block;
+  width: 100%;
+}
+
+.global-full-center-block {
+  @extend .global-full-block;
+  justify-content: center;
+}
+
+.global-half-block {
+  @extend .global-block;
+  height: 50vh;
+}
+
+.global-over-block {
+  @extend .global-block;
+  height: 120vh;
+}

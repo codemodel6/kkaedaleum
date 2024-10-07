@@ -1,0 +1,49 @@
+@import "/src/assets/global/globalDisplay.scss";
+@import "/src/assets/color/ColorNote.scss";
+
+.the-header-wrapper {
+  @include betweenRow;
+  background-color: $Bg200;
+  z-index: 100;
+  position: fixed;
+  width: 100vw;
+  height: 90px;
+
+  .header-logo-wrapper {
+    @include betweenRow;
+    width: 40%;
+    height: 100%;
+    margin-left: 5%;
+
+    .logo-item {
+      @include centerColumn;
+      background-color: $Primary100;
+      color: white;
+      height: 50%;
+      width: 40%;
+      font-size: $large;
+      margin-right: 5%;
+    }
+
+    // .text-item {
+    //   @include centerColumn;
+    //   height: 100%;
+    //   width: 60%;
+    //   font-size: $xxsmall;
+    // }
+  }
+
+  .header-menu-wrapper {
+    @include aroundRow;
+    width: 40%;
+    height: 100%;
+
+    .menu-item {
+      font-size: $medium;
+      cursor: pointer;
+      background-color: transparent;
+      color: $Primary100;
+      font-weight: bold;
+    }
+  }
+}
