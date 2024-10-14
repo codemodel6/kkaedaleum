@@ -1,0 +1,41 @@
+@import "/src/assets/global/globalDisplay.scss";
+@import "/src/assets/color/ColorNote.scss";
+
+.home-carousel-wrapper {
+  @include centerColumn;
+  width: 100%;
+  height: 100%;
+  font-size: 50px;
+  background-color: orange;
+
+  .text-wrapper {
+    .title {
+      font-size: 60px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-style: oblique;
+      color: black;
+    }
+
+    .contents {
+      font-size: 20px;
+    }
+  }
+
+  div {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+
+    .img-wrapper {
+      width: 100%;
+      height: 100%;
+      background-color: blue;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

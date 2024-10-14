@@ -3,7 +3,8 @@
 
 .the-header-wrapper {
   @include betweenRow;
-  background-color: $Bg200;
+  // background-color: $Bg200;
+  background-color: transparent;
   z-index: 100;
   position: fixed;
   width: 100vw;
