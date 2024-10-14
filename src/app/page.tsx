@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useCallback, useState } from "react";
 import styles from "./home.module.scss";
-import Header from "../components/header/Header";
+import Header from "../components/organism/header/Header";
 
 export default function Home() {
   const sectionsRef = useRef<(HTMLElement | null)[]>([]); // 섹션 요소들을 담을 ref 배열 생성
