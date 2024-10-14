@@ -1,10 +1,10 @@
 @import "/src/assets/global/globalDisplay.scss";
 @import "/src/assets/color/ColorNote.scss";
 
-.home-wrppaer {
+.home-wrapper {
   height: 100vh;
-  background-color: black;
   overflow: auto;
+  background-color: orange;
 
   /* 스크롤 안보이게 하는 css */
   scrollbar-width: none; /* Firefox */
@@ -13,31 +13,15 @@
   &::-webkit-scrollbar {
     display: none; /* Safari / Chrome */
   }
-}
 
-.section {
-  height: 100vh;
-  @include centerColumn;
+  section {
+    @include centerColumn;
+    height: 100vh;
 
-  &.blue {
-    background-color: $Bg100;
-  }
-
-  &.green {
-    background-color: #10b981;
-  }
-
-  &.red {
-    background-color: #ef4444;
-  }
-
-  &.yellow {
-    background-color: #f59e0b;
-  }
-
-  h1 {
-    color: white;
-    font-size: 2.25rem;
+    h1 {
+      color: white;
+      font-size: 2.25rem;
+    }
   }
 }
 

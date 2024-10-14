@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useCallback, useState } from "react";
-import "./home.scss";
+import styles from "./home.module.scss";
 import Header from "../components/header/Header";
 
 export default function Home() {
@@ -77,12 +77,11 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="home-wrppaer" ref={homeWrapperRef}>
+      <div className={styles["home-wrapper"]} ref={homeWrapperRef}>
         <section
           ref={(el) => {
             sectionsRef.current[0] = el;
           }}
-          className="section blue"
         >
           <h1>First Screen</h1>
         </section>
@@ -90,7 +89,6 @@ export default function Home() {
           ref={(el) => {
             sectionsRef.current[1] = el;
           }}
-          className="section green"
         >
           <h1>Second Screen</h1>
         </section>
@@ -98,7 +96,6 @@ export default function Home() {
           ref={(el) => {
             sectionsRef.current[2] = el;
           }}
-          className="section red"
         >
           <h1>Third Screen</h1>
         </section>
@@ -106,23 +103,24 @@ export default function Home() {
           ref={(el) => {
             sectionsRef.current[3] = el;
           }}
-          className="section yellow"
         >
           <h1>Fourth Screen</h1>
         </section>
-        <div className="kkae-stick">
-          <div className="stick-face">
-            <div className="stick-eye-line">
-              <div className="stick-eyes"></div>
-              <div className="stick-eyes"></div>
+        <div className={styles["kkae-stick"]}>
+          <div className={styles["stick-face"]}>
+            <div className={styles["stick-eye-line"]}>
+              <div className={styles["stick-eyes"]}></div>
+              <div className={styles["stick-eyes"]}></div>
             </div>
-            <div className="stick-mouse"></div>
+            <div className={styles["stick-mouse"]}></div>
           </div>
-          <div className="stick-circle-block">
+          <div className={styles["stick-circle-block"]}>
             {[...Array(sectionsCount)].map((_, index) => (
               <div
                 key={index}
-                className={`circle ${index === activeIndex ? "active" : ""}`}
+                className={`${styles.circle} ${
+                  index === activeIndex ? styles.active : ""
+                }`}
                 onClick={() => scrollToSection(index)}
               ></div>
             ))}
