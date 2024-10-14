@@ -3,6 +3,7 @@
 import { useEffect, useRef, useCallback, useState } from "react";
 import styles from "./home.module.scss";
 import Header from "../components/organism/header/Header";
+import HomeIntro from "@/components/home/home-intro/HomeIntro";
 
 export default function Home() {
   const sectionsRef = useRef<(HTMLElement | null)[]>([]); // 섹션 요소들을 담을 ref 배열 생성
@@ -83,7 +84,7 @@ export default function Home() {
             sectionsRef.current[0] = el;
           }}
         >
-          <h1>First Screen</h1>
+          <HomeIntro />
         </section>
         <section
           ref={(el) => {
