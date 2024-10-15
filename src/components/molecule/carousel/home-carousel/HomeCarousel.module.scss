@@ -6,35 +6,46 @@
   width: 100%;
   height: 100%;
   font-size: 50px;
-  background-color: orange;
-
-  .text-wrapper {
-    .title {
-      font-size: 60px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      font-style: oblique;
-      color: black;
-    }
-
-    .contents {
-      font-size: 20px;
-    }
-  }
+  // background-color: orange;
 
   div {
     width: 100%;
     height: 100%;
-    background-color: red;
 
     .img-wrapper {
+      position: relative;
       width: 100%;
-      height: 100%;
-      background-color: blue;
+      height: 99.9%;
 
-      img {
-        width: 100%;
+      .overlay {
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        position: absolute;
         height: 100%;
+        width: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.2);
+
+        .text-block {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: absolute;
+          z-index: 1;
+          left: 10%;
+          bottom: 10%;
+          width: 70%;
+          height: 15%;
+          color: white;
+          // background-color: orange;
+
+          h3 {
+            margin-bottom: 0.5rem;
+          }
+          span {
+            font-size: $xxlarge;
+          }
+        }
       }
     }
   }
