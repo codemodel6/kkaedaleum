@@ -15,7 +15,7 @@ const HomeCarousel = () => {
     arrows: false,
     autoplay: true,
     speed: 1000,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 4500,
     cssEase: "linear",
     pauseOnHover: false, // 마우스 호버에도 자동으로 넘어감
   };

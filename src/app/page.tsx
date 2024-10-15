@@ -4,6 +4,7 @@ import { useEffect, useRef, useCallback, useState } from "react";
 import styles from "./home.module.scss";
 import Header from "../components/organism/header/Header";
 import HomeIntro from "@/components/home/home-intro/HomeIntro";
+import HomeMenu from "@/components/home/home-menu/HomeMenu";
 
 export default function Home() {
   const sectionsRef = useRef<(HTMLElement | null)[]>([]); // 섹션 요소들을 담을 ref 배열 생성
@@ -91,7 +92,7 @@ export default function Home() {
             sectionsRef.current[1] = el;
           }}
         >
-          <h1>Second Screen</h1>
+          <HomeMenu />
         </section>
         <section
           ref={(el) => {

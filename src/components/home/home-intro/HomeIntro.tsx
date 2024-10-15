@@ -4,7 +4,7 @@ import HomeCarousel from "@/components/molecule/carousel/home-carousel/HomeCarou
 
 const HomeIntro = () => {
   return (
-    <div className="global-full-block">
+    <div className="global-full-wide-block">
       <div className={styles["home-intro-wrapper"]}>
         <HomeCarousel />
       </div>

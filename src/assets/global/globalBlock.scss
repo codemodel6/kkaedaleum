@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 80%;
   height: 100vh;
   padding-top: 90px;
 }
@@ -21,8 +21,19 @@
   padding-top: 0;
 }
 
-.global-full-center-block {
-  @extend .global-full-block;
+.global-wide-block {
+  @extend .global-block;
+  width: 100%;
+}
+
+.global-full-wide-block {
+  @extend .global-block;
+  padding-top: 0;
+  width: 100%;
+}
+
+.global-wide-center-block {
+  @extend .global-wide-block;
   justify-content: center;
 }
 
