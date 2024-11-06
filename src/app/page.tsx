@@ -5,6 +5,7 @@ import styles from "./home.module.scss";
 import Header from "../components/organism/header/Header";
 import HomeIntro from "@/components/home/home-intro/HomeIntro";
 import HomeMenu from "@/components/home/home-menu/HomeMenu";
+import HomeTopic from "@/components/home/home-topic/HomeTopic";
 
 export default function Home() {
   const sectionsRef = useRef<(HTMLElement | null)[]>([]); // 섹션 요소들을 담을 ref 배열 생성
@@ -99,7 +100,7 @@ export default function Home() {
             sectionsRef.current[2] = el;
           }}
         >
-          <h1>Third Screen</h1>
+          <HomeTopic />
         </section>
         <section
           ref={(el) => {
